@@ -1,5 +1,3 @@
-# TemperatureReader
-
 # INSTRUCTIONS :
 ## For the program to work properly, you need to add the "JSON" file into your "bin\Debug" directory.
 
