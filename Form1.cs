@@ -78,7 +78,13 @@ namespace TemperatureReader
     {
         static string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static string ApplicationName = "Temperature Reader";
-        static string ClientSecretFilePath = "D:\\COURSES\\TISHITU\\CSharpPrograms\\TemperatureReader\\bin\\Debug\\client_secret_947361990979-qtarip1envsd8d2ldjhr80pki342evco.apps.googleusercontent.com.json"; 
+        static string ClientSecretFilePath;
+
+        static GoogleSheetsAuthentication()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            ClientSecretFilePath = Path.Combine(currentDirectory, "client_secret_947361990979-qtarip1envsd8d2ldjhr80pki342evco.apps.googleusercontent.com.json");
+        } 
 
         public static SheetsService GetService()
         {
